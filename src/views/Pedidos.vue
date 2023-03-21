@@ -1,17 +1,20 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
+  <div class="pedidos">
+    <h1>Pedidos</h1>
   </div>
 </template>
+
+
 
 <script>
 
 export default {
-  name: 'HomeView',
+  name: 'Pedidos',
 }
+
 </script>
 
 
-<style scoped>
 
+<style scoped>
 </style>
