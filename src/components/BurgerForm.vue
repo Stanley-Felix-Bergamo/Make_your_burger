@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>Componente msg</p>
-        <form id="burger-form">
+        <Message :msg="msg" v-show="msg" />
+        <form @submit="createBurger" id="burger-form">
             <div class="input-container">
                 <label for="nome">Nome do cliente:</label>
                 <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o nome do cliente">
@@ -37,9 +37,12 @@
 
 
 <script>
-
+import Message from './Message.vue';
 export default {
-    name: 'BurguerForm',
+    name: 'BurgerForm',
+    components: {
+        Message,
+    },
     data() {
         return {
             paes: null,
@@ -49,7 +52,6 @@ export default {
             pao: null,
             carne: null,
             opcionais: [],
-            status: 'Solicitado',
             msg: null,
         }
     },
@@ -61,14 +63,43 @@ export default {
             this.paes = data.paes;
             this.carnes = data.carnes;
             this.opcionaisdata = data.opcionais;
+        },
+        async createBurger(e) {
+            e.preventDefault();
+            const data = {
+                nome: this.nome,
+                carne: this.carne,
+                pao: this.pao,
+                opcionais: Array.from(this.opcionais),
+                status: 'Solicitado',
+            }
+
+            const dataJson = JSON.stringify(data);
+
+            const req = await fetch('http://localhost:3000/burgers', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: dataJson,
+            });
+
+            const res = await req.json();
+
+            this.msg = `Pedido N° ${res.id} realizado com sucesso`;
+
+
+            setTimeout(() => this.msg = "", 3000);
+            this.nome = '';
+            this.carne = '';
+            this.pao = '';
+            this.opcionais = '';
         }
     },
+
     mounted() {
         this.getIngredientes();
     }
 }
 </script>
-
 
 
 <style scoped>
@@ -111,7 +142,6 @@ select {
     align-items: flex-start;
     width: 50%;
     margin-bottom: 20px;
-
 }
 
 .checkbox-container span,
