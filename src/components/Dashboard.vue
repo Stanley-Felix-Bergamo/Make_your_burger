@@ -10,17 +10,15 @@
                 <div>Ações:</div>
             </div>
         </div>
-
         <div id="burger-table-rows">
-            <div class="burger-table-row">
-                <div class="order-number">1</div>
-                <div>Jonas</div>
-                <div>pão</div>
-                <div>maminha</div>
+            <div class="burger-table-row" v-for="burguer in burgers" :key="burguer.id">
+                <div class="order-number">{{ burguer.id }}</div>
+                <div>{{ burguer.nome }}</div>
+                <div>{{ burguer.pao }}</div>
+                <div>{{ burguer.carne }}</div>
                 <div>
                     <ul>
-                        <li>Salame</li>
-                        <li>tomate</li>
+                        <li v-for="(opcional, index) in burguer.opcionais" :key="index">{{ opcional }}</li>
                     </ul>
                 </div>
                 <div>
@@ -40,10 +38,26 @@
 <script>
 export default {
     name: 'Dashboard',
+    data() {
+        return {
+            burgers: null,
+            burger_id: null,
+            status: [],
+        }
+    },
+    methods: {
+        async getPedidos() {
+            const req = await fetch('http://localhost:3000/burgers');
+            const data = await req.json();
+            this.burgers = data;
 
+
+        }
+    },
+    mounted() {
+        this.getPedidos();
+    },
 }
-
-
 </script>
 
 

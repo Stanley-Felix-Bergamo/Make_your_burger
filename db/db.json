@@ -81,5 +81,18 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "nome": "Stanley",
+      "carne": "Picanha",
+      "pao": "Francês",
+      "opcionais": [
+        "Cheddar",
+        "Bacon",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 1
+    }
+  ]
 }
