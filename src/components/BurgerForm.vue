@@ -86,8 +86,8 @@ export default {
 
             this.msg = `Pedido N° ${res.id} realizado com sucesso`;
 
-
             setTimeout(() => this.msg = "", 3000);
+
             this.nome = '';
             this.carne = '';
             this.pao = '';
