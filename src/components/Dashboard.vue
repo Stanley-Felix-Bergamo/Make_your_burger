@@ -24,7 +24,8 @@
                 <div>
                     <select name="status" id="status">
                         <option value="">Selecione</option>
-                        <option v-for="s in status" :key="s.id" :value="s.tipo">{{ s.tipo }}</option>
+                        <option v-for="s in status" :key="s.id" :value="s.tipo" :selected="burguer.status == s.tipo">{{ s.tipo
+                        }}</option>
                     </select>
                     <button class="delete-btn">Cancelar</button>
                 </div>
