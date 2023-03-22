@@ -91,8 +91,30 @@
         "Bacon",
         "Cebola roxa"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 1
+    },
+    {
+      "nome": "Alberto",
+      "carne": "Alcatra",
+      "pao": "Integral",
+      "opcionais": [
+        "Pepino",
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "nome": "Matheus",
+      "carne": "Maminha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Cheddar",
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 3
     }
   ]
 }
