@@ -16,6 +16,9 @@
             {
                 "id": 4,
                 "tipo": "Integral"
+            },{
+                "id":5,
+                "tipo":"Francês"
             }
         ],
         "carnes": [
