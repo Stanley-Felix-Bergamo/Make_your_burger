@@ -1,5 +1,14 @@
 # Make your burger <img align="right" src="https://img.shields.io/static/v1?label=STATUS&message=Está %20em andamento &color=red&style=for-the-badge"/>
 
+<div align="center" >
+    <img width="725rem" src="https://servidor-estaticos-ten.vercel.app/make1.png" alt="imagem">
+</div> 
+<br>
+
+> Para ver o projeto rodando você pode acessar este [Link](https://make-your-burger-two.vercel.app/).
+
+
+
 <h2>👨‍🏫 Créditos</h2>
 <p>Este projeto foi realizado nas aulas do Curso do  <a target="_blank" href="https://www.youtube.com/watch?v=wsAQQioPIJs&list=PLnDvRpP8BnezDglaAvtWgQXzsOmXUuRHL&ab_channel=MatheusBattisti-HoradeCodar">Matheus Battisti - Hora de Codar</a>.</p>
 
