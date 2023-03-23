@@ -3,9 +3,11 @@
 <div align="center" >
     <img width="725rem" src="https://servidor-estaticos-ten.vercel.app/make1.png" alt="imagem">
 </div> 
-<h1>Na sua máquina execute os comandos:</h1><br>
-<p>1) Em um CMD use, npm run backend</p>
-<p>2) E em outro use, npm run serve</p>
+
+<p>Para executar na sua máquina, execute:</p>
+<p>1) Abra o Git Bash,  e execulte npm run backend, no diretório do projeto.</p>
+<p>2) E no CMD do diretório do projeto,execulte npm run serve.</p>
+
 
 <h2>👨‍🏫 Créditos</h2>
 <p>Este projeto foi realizado nas aulas do Curso do  <a target="_blank" href="https://www.youtube.com/watch?v=wsAQQioPIJs&list=PLnDvRpP8BnezDglaAvtWgQXzsOmXUuRHL&ab_channel=MatheusBattisti-HoradeCodar">Matheus Battisti - Hora de Codar</a>.</p>
